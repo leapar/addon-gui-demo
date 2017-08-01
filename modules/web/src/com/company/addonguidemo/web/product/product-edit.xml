@@ -4,7 +4,9 @@
         class="com.company.addonguidemo.web.product.ProductEdit"
         datasource="productDs"
         focusComponent="fieldGroup"
-        messagesPack="com.company.addonguidemo.web.product">
+        messagesPack="com.company.addonguidemo.web.product"
+        xmlns:app="http://schemas.company.com/agd/0.1/ui-component.xsd"
+        xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
     <dsContext>
         <datasource id="productDs"
                     class="com.company.addonguidemo.entity.Product"
@@ -24,6 +26,12 @@
                        property="slider"/>
             </column>
         </fieldGroup>
+       
+        <app:baidumap height="400px"
+                      lat="39.0"
+                      lng="114.0"
+                      width="500px"
+                      zoom="13"/>
         <frame id="windowActions"
                screen="editWindowActions"/>
     </layout>

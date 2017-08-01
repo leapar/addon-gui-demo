@@ -50,8 +50,8 @@ public class ProductEdit extends AbstractEditor<Product> {
         fcName.setComponent(box);
         fieldGroup.addField(fcName);*/
 
-        FieldGroup.FieldConfig sliderCol = fieldGroup.getField("slider");
-        sliderCol.setComponent(box);
+     //   FieldGroup.FieldConfig sliderCol = fieldGroup.getField("slider");
+     //   sliderCol.setComponent(box);
 
 /*
         fieldGroup.addCustomField("slider", (datasource, propertyId) -> {

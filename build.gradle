@@ -7,6 +7,13 @@ buildscript {
             url 'https://dl.bintray.com/cuba-platform/main'
             
         }
+        maven {
+            url 'https://cuba-platform.bintray.com/premium'
+            credentials {
+                username(rootProject.hasProperty('premiumRepoUser') ? rootProject['premiumRepoUser'] : System.getenv('CUBA_PREMIUM_USER'))
+                password(rootProject.hasProperty('premiumRepoPass') ? rootProject['premiumRepoPass'] : System.getenv('CUBA_PREMIUM_PASSWORD'))
+            }
+        }
         
         
         mavenCentral()
@@ -45,6 +52,7 @@ cuba {
 
 dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
+    appComponent("com.haulmont.charts:charts-global:$cubaVersion")
 
 }
 
